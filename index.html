@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#06030f" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="EDC Vegas '26" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="EDC Las Vegas 2026 — Saturday + Sunday guide for Gordon, Mason, Drake & Matt. The 10-year arc, Alison Wonderland at Cosmic Meadow, Armin sunrise. Made for the four." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="EDC Vegas '26 · Two Days · The Seven of Us" />
+<meta property="og:description" content="An invitation from Gordon — for Mason, Bailey, Drake, Matt, Dave, and Trent. Saturday in town, Sunday at the Speedway. Alison at midnight. Armin at sunrise." />
+<meta name="twitter:card" content="summary_large_image" />
+<title>EDC Vegas '26 · Two Days · The Seven of Us</title>
+<style>
+  :root{
+    --bg:#06030f;
+    --ink:#f7f3ff;
+    --dim:#b9a8e0;
+    --pink:#ff3aa1;
+    --magenta:#c026d3;
+    --violet:#7c3aed;
+    --cyan:#22d3ee;
+    --lime:#a3e635;
+    --gold:#ffd166;
+    --kinetic: linear-gradient(135deg,#ff3aa1,#c026d3 60%,#7c3aed);
+    --cosmic:  linear-gradient(135deg,#22d3ee,#7c3aed 60%,#ff3aa1);
+    --circuit: linear-gradient(135deg,#a3e635,#22d3ee);
+    --basspod: linear-gradient(135deg,#ff7a00,#ff2d6f);
+    --neon:    linear-gradient(135deg,#39ff14,#00f0ff);
+    --quantum: linear-gradient(135deg,#a78bfa,#22d3ee);
+    --waste:   linear-gradient(135deg,#fb7185,#7c3aed);
+    --bionic:  linear-gradient(135deg,#34d399,#22d3ee);
+    --stereo:  linear-gradient(135deg,#fde68a,#f472b6);
+    --takis:   linear-gradient(135deg,#ef4444,#f97316 60%,#facc15);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.45}
+  body{
+    background:
+      radial-gradient(900px 600px at 80% -10%, rgba(192,38,211,.35), transparent 60%),
+      radial-gradient(800px 500px at 0% 30%, rgba(34,211,238,.25), transparent 55%),
+      radial-gradient(700px 700px at 100% 100%, rgba(255,58,161,.25), transparent 55%),
+      var(--bg);
+    min-height:100vh;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+  /* HERO */
+  .hero{
+    position:relative;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:40px 28px 36px;
+    overflow:hidden;
+    background:
+      radial-gradient(600px 300px at 90% 0%, rgba(255,58,161,.45), transparent 60%),
+      radial-gradient(500px 320px at 0% 100%, rgba(34,211,238,.35), transparent 55%),
+      linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+    box-shadow:0 30px 80px rgba(124,58,237,.25), inset 0 0 0 1px rgba(255,255,255,.04);
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:6px 12px;border-radius:999px;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);
+  }
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--pink);box-shadow:0 0 14px var(--pink)}
+  h1{
+    font-size: clamp(38px, 8vw, 84px);
+    line-height:0.95;
+    margin:18px 0 8px;
+    letter-spacing:-0.02em;
+    font-weight:900;
+    background:linear-gradient(90deg,#fff 0%,#ffd166 35%,#ff3aa1 65%,#22d3ee 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow: 0 0 40px rgba(255,58,161,.18);
+  }
+  .sub{color:var(--dim);font-size:clamp(15px,2.4vw,18px);max-width:60ch}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .pill{
+    padding:8px 14px;border-radius:999px;font-size:13px;
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#eae3ff
+  }
+  .pill strong{color:#fff}
+  .anniv{
+    margin-top:22px;padding:16px 18px;border-radius:16px;
+    background:linear-gradient(90deg, rgba(255,209,102,.12), rgba(255,58,161,.12));
+    border:1px solid rgba(255,209,102,.35);
+    display:flex;gap:14px;align-items:center
+  }
+  .anniv .x{font-size:28px}
+  .anniv h3{margin:0 0 2px;font-size:16px;letter-spacing:.04em}
+  .anniv p{margin:0;color:var(--dim);font-size:13px}
+
+  h2{
+    font-size:clamp(22px,3.6vw,28px);letter-spacing:-0.01em;margin:42px 0 14px;
+    display:flex;align-items:center;gap:10px;
+  }
+  h2 .num{
+    font-size:14px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;
+    padding:5px 10px;border-radius:8px;background:rgba(255,209,102,.08);border:1px solid rgba(255,209,102,.25)
+  }
+
+  /* CARDS */
+  .card{
+    border:1px solid rgba(255,255,255,.08);
+    background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+    border-radius:18px;padding:18px 18px;margin:12px 0;
+    backdrop-filter:saturate(1.2) blur(4px);
+  }
+  .card.hot{
+    border:1px solid rgba(255,58,161,.45);
+    background:linear-gradient(180deg, rgba(255,58,161,.12), rgba(124,58,237,.08));
+    box-shadow:0 20px 60px rgba(255,58,161,.2);
+  }
+  .card.gold{
+    border:1px solid rgba(255,209,102,.5);
+    background:linear-gradient(180deg, rgba(255,209,102,.10), rgba(255,58,161,.05));
+  }
+  .row{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+  .time{
+    flex:0 0 120px;
+    font-variant-numeric:tabular-nums;
+    font-weight:800;letter-spacing:.02em;
+    background:linear-gradient(90deg,#fff,#ffd166);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .body{flex:1;min-width:240px}
+  .who{font-size:18px;font-weight:700;margin:0 0 4px}
+  .stage{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink);padding:3px 10px;border-radius:999px;display:inline-block;margin-right:6px;
+  }
+  .s-kinetic{background:var(--kinetic)}
+  .s-cosmic{background:var(--cosmic)}
+  .s-circuit{background:var(--circuit);color:#0a0613}
+  .s-basspod{background:var(--basspod)}
+  .s-neon{background:var(--neon);color:#0a0613}
+  .s-quantum{background:var(--quantum);color:#0a0613}
+  .s-waste{background:var(--waste)}
+  .s-bionic{background:var(--bionic);color:#0a0613}
+  .s-stereo{background:var(--stereo);color:#0a0613}
+  .s-takis{background:var(--takis);color:#0a0613}
+  .why{color:var(--dim);font-size:14px;margin-top:6px}
+  .alt{font-size:13px;color:#cbb8f5;margin-top:8px;border-left:2px solid rgba(255,255,255,.15);padding-left:10px}
+
+  /* The Alison spotlight */
+  .alison{
+    position:relative;border-radius:24px;padding:28px 24px;margin:18px 0;
+    background:
+      radial-gradient(500px 220px at 100% 0%, rgba(34,211,238,.55), transparent 60%),
+      radial-gradient(420px 260px at 0% 100%, rgba(255,58,161,.55), transparent 60%),
+      linear-gradient(180deg, rgba(124,58,237,.35), rgba(34,211,238,.10));
+    border:1px solid rgba(255,255,255,.18);
+    box-shadow:0 30px 100px rgba(124,58,237,.45), inset 0 0 30px rgba(255,255,255,.05);
+    overflow:hidden;
+  }
+  .alison .label{font-size:12px;letter-spacing:.3em;color:#fde68a;text-transform:uppercase}
+  .alison h3{
+    font-size:clamp(28px,5.2vw,42px);margin:6px 0 10px;letter-spacing:-0.02em;
+    background:linear-gradient(90deg,#fff,#22d3ee 55%,#ff3aa1);
+    -webkit-background-clip:text;background-clip:text;color:transparent
+  }
+  .alison .clock{
+    font-size:clamp(40px,9vw,80px);font-weight:900;letter-spacing:-0.03em;line-height:1;
+    background:linear-gradient(90deg,#ffd166,#ff3aa1,#22d3ee);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    margin:8px 0 6px
+  }
+  .alison .where{color:#e5dffe;font-size:16px}
+  .alison .note{color:#cbb8f5;margin-top:14px;font-size:14px;max-width:60ch}
+
+  /* GRID for stages */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:6px}
+  .tile{
+    border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;
+    background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0))
+  }
+  .tile h4{margin:0 0 6px;font-size:14px;letter-spacing:.18em;text-transform:uppercase}
+  .tile ul{margin:6px 0 0;padding:0;list-style:none}
+  .tile li{font-size:13px;color:#dccff5;padding:3px 0;border-bottom:1px dashed rgba(255,255,255,.06)}
+  .tile li:last-child{border-bottom:0}
+  .tile li b{color:#fff;font-weight:600}
+  .tile li .t{color:#ffd166;font-variant-numeric:tabular-nums;font-weight:700;margin-right:8px}
+
+  /* Pre-game / survival */
+  .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .kv{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+  .kv:last-child{border-bottom:0}
+  .kv span:first-child{color:var(--dim);font-size:13px}
+  .kv span:last-child{font-weight:600}
+
+  .crew{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .crew .p{
+    padding:8px 12px;border-radius:999px;
+    background:linear-gradient(90deg,rgba(255,58,161,.18),rgba(124,58,237,.18));
+    border:1px solid rgba(255,255,255,.14);font-size:13px
+  }
+
+  .footer{margin-top:36px;color:var(--dim);font-size:12px;text-align:center;letter-spacing:.06em}
+  .footer .heart{color:var(--pink)}
+
+  /* sparkle */
+  .sparkles{position:absolute;inset:0;pointer-events:none}
+  .sparkles span{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.7;
+    box-shadow:0 0 10px #fff,0 0 20px var(--pink)}
+  @keyframes twink{0%,100%{opacity:.2}50%{opacity:1}}
+  .sparkles span{animation:twink 3s ease-in-out infinite}
+  .sparkles span:nth-child(1){left:10%;top:18%;animation-delay:.2s}
+  .sparkles span:nth-child(2){left:78%;top:30%;animation-delay:1.1s}
+  .sparkles span:nth-child(3){left:54%;top:8%;animation-delay:.6s;background:#22d3ee;box-shadow:0 0 10px #22d3ee}
+  .sparkles span:nth-child(4){left:90%;top:78%;animation-delay:1.5s;background:#ffd166;box-shadow:0 0 10px #ffd166}
+  .sparkles span:nth-child(5){left:22%;top:80%;animation-delay:.9s;background:#a3e635;box-shadow:0 0 10px #a3e635}
+
+  /* Festival map sketch */
+  .map{margin-top:6px}
+  .map-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows:repeat(3,minmax(72px,auto));
+    gap:8px;
+    padding:14px;
+    border-radius:14px;
+    background:
+      radial-gradient(220px 160px at 50% 0%, rgba(255,58,161,.18), transparent 70%),
+      radial-gradient(200px 160px at 0% 100%, rgba(34,211,238,.18), transparent 70%),
+      linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+    border:1px solid rgba(255,255,255,.1)
+  }
+  .m{
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    border-radius:10px;padding:10px 6px;font-size:12px;font-weight:700;letter-spacing:.04em;
+    border:1px solid rgba(255,255,255,.12);color:#fff;line-height:1.15
+  }
+  /* row 1: top of speedway */
+  .m-bj{grid-column:1;grid-row:1;background:var(--bionic);color:#0a0613}
+  .m-kf{grid-column:2 / span 2;grid-row:1;background:var(--kinetic);box-shadow:0 0 24px rgba(255,58,161,.45)}
+  .m-sb{grid-column:4;grid-row:1;background:var(--stereo);color:#0a0613}
+  .m-qv{grid-column:5;grid-row:1;background:var(--quantum);color:#0a0613}
+  /* row 2: middle */
+  .m-cm{grid-column:1;grid-row:2;background:var(--cosmic);box-shadow:0 0 24px rgba(34,211,238,.45)}
+  .m-dt{grid-column:2 / span 3;grid-row:2;background:linear-gradient(135deg,#fde68a,#f472b6 60%,#22d3ee);color:#0a0613}
+  .m-ng{grid-column:5;grid-row:2;background:var(--neon);color:#0a0613}
+  /* row 3: bottom */
+  .m-wl{grid-column:1;grid-row:3;background:var(--waste)}
+  .m-bp{grid-column:2 / span 3;grid-row:3;background:var(--basspod)}
+  .m-cg{grid-column:5;grid-row:3;background:var(--circuit);color:#0a0613}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .legend .lg{font-size:12px;color:#cbb8f5;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:5px 10px;border-radius:999px}
+  .legend .lg b{color:#fff}
+  @media (max-width:560px){
+    .map-grid{grid-template-columns:repeat(3,1fr)}
+    .m-kf{grid-column:1 / span 3;grid-row:1}
+    .m-bj{grid-column:1;grid-row:2}
+    .m-sb{grid-column:2;grid-row:2}
+    .m-qv{grid-column:3;grid-row:2}
+    .m-cm{grid-column:1;grid-row:3}
+    .m-dt{grid-column:2;grid-row:3}
+    .m-ng{grid-column:3;grid-row:3}
+    .m-wl{grid-column:1;grid-row:4}
+    .m-bp{grid-column:2;grid-row:4}
+    .m-cg{grid-column:3;grid-row:4}
+    .map-grid{grid-template-rows:repeat(4,minmax(60px,auto))}
+  }
+
+  /* iPhone / mobile · everything below 720px */
+  @media (max-width:720px){
+    .wrap{padding:18px 14px 64px}
+    .hero{padding:24px 18px 22px;border-radius:20px}
+    .badge{font-size:11px;letter-spacing:.14em;padding:5px 10px}
+    .meta{gap:6px;margin-top:14px}
+    .pill{padding:6px 10px;font-size:12px}
+    .anniv{margin-top:16px;padding:12px 14px;border-radius:14px;gap:10px}
+    .anniv .x{font-size:22px}
+    .anniv h3{font-size:14px}
+    .anniv p{font-size:12px}
+
+    h2{margin:30px 0 10px;gap:8px}
+    h2 .num{font-size:11px;padding:4px 8px}
+
+    .card{padding:14px;border-radius:14px;margin:10px 0}
+    .row{gap:10px}
+    /* Stack the time above the body on phones — much easier to read */
+    .time{flex:0 0 100%;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+    .body{min-width:0}
+    .who{font-size:16px}
+    .stage{font-size:11px;letter-spacing:.14em;padding:2px 8px;margin-bottom:4px}
+    .why{font-size:13px}
+    .alt{font-size:12px}
+
+    .alison{padding:22px 18px;border-radius:20px}
+    .alison .label{font-size:11px;letter-spacing:.24em}
+    .alison .where{font-size:14px}
+    .alison .note{font-size:13px}
+
+    .grid{gap:10px}
+    .tile{padding:12px;border-radius:12px}
+    .tile h4{font-size:13px}
+    .tile li{font-size:12px}
+
+    .two{gap:10px}
+    .kv{padding:7px 0;font-size:13px}
+    .kv span:first-child{font-size:12px}
+    .kv span:last-child{font-size:13px}
+
+    .crew{gap:6px}
+    .crew .p{font-size:12px;padding:6px 10px}
+
+    /* Map already has its own narrower rules — leave the cascade in place */
+    .map-grid{padding:10px;gap:6px}
+    .legend{gap:6px}
+    .legend .lg{font-size:11px;padding:4px 8px}
+
+    .footer{margin-top:28px;font-size:11px}
+  }
+
+  /* Extra-narrow iPhone (SE / mini) */
+  @media (max-width:380px){
+    .wrap{padding:14px 12px 56px}
+    .hero{padding:20px 16px}
+    h1{letter-spacing:-0.025em}
+    .pill{font-size:11px;padding:5px 9px}
+    .alison .clock{font-size:clamp(34px,11vw,60px)}
+  }
+
+  /* Print friendliness */
+  @media print {
+    body{background:#fff;color:#000}
+    .hero,.alison,.card,.tile{break-inside:avoid;box-shadow:none;border-color:#ddd;background:#fff;color:#000}
+    h1,.alison h3,.alison .clock,.time{-webkit-text-fill-color:#000;color:#000;background:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="hero">
+    <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
+    <span class="badge"><span class="dot"></span> An invitation from Gordon · Saturday May 16 + Sunday May 17, 2026</span>
+    <h1>Ten Years In.<br/>Together.</h1>
+    <p class="sub">Mason · Bailey · Drake · Matt · Dave · Trent — this is for the six of you. Saturday splits naturally: four of us land in Vegas, three of you are already at the Speedway for Day 2. Sunday all seven of us are inside the gates. The one moment I'd love to share with everyone — <b>Alison Wonderland</b>. Everything else is yours, however you want it.</p>
+
+    <div class="meta">
+      <span class="pill"><strong>Sat May 16</strong> · arrival + AREA15</span>
+      <span class="pill"><strong>Sun May 17</strong> · 7 PM → 5:30 AM at the Speedway</span>
+      <span class="pill"><strong>9 mains</strong> + 8 side stages</span>
+      <span class="pill"><strong>EDC turns 30</strong></span>
+    </div>
+
+    <div class="anniv">
+      <div class="x">🛗</div>
+      <div>
+        <h3>The 10-year arc</h3>
+        <p><b>2016.</b> Mason and I went to our first EDC. The first person we met — in the elevator, before the Day 1 shuttle — was Drake. <b>2026.</b> The three of us hit our 10th together, and we get to share it with you all. Bailey's bringing Mason in from LA. Matt's the local — Summerlin, EDC vet. Dave + Trent — Dave was on that 2019 Electric Zoo VIP list with Drake and me. EDC turns 30, we turn 10. So glad you're in it with us.</p>
+      </div>
+    </div>
+  </section>
+
+  <h2><span class="num">Day 2</span> Saturday · May 16 · Two Tracks</h2>
+  <div class="card">
+    <p class="why" style="font-size:14px;color:#dccff5;margin:0 0 12px">
+      Saturday splits naturally. <b>Four of us</b> — me, Drake, Mason, Bailey — land in Vegas mid-afternoon and have the night to settle in. <b>Three of you</b> — Matt, Dave, Trent — are already at the Speedway for Day 2. The two tracks meet up Sunday.
+    </p>
+    <div class="two">
+      <div>
+        <div class="kv"><span>Me</span><span>Lands LAS · mid-afternoon</span></div>
+        <div class="kv"><span>Drake</span><span>Mid-afternoon (let me know if different)</span></div>
+        <div class="kv"><span>Mason + Bailey</span><span>Mid-afternoon · driving in from LA</span></div>
+        <div class="kv"><span>Where we're staying</span><span>With Angela Roseboro</span></div>
+      </div>
+      <div>
+        <div class="kv"><span>Matt</span><span>At EDC Saturday · doing all 3 days</span></div>
+        <div class="kv"><span>Dave + Trent</span><span>At EDC Saturday + Sunday</span></div>
+        <div class="kv"><span>Will-call window</span><span>Sat 2 PM – 2 AM</span></div>
+        <div class="kv"><span>Will-call address</span><span>World Market Center<br/>435 S Grand Central Pkwy</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:30px"><span class="num">Track A</span> Saturday in Vegas · Drake · Mason · Bailey · me</h2>
+
+  <div class="card hot">
+    <p class="who" style="font-size:18px">🩸 What I'm thinking · Universal Horror Unleashed @ AREA15</p>
+    <p class="why">
+      Year-round, Thu–Sun. Four movie-IP haunted houses — <b>Universal Monsters · Blumhouse's Exorcist: Believer · Texas Chainsaw Massacre · Scarecrow: The Reaping</b>. Four themed zones, roaming scare actors, live stage show, bars and dining. <b>Mason — this is your lane</b>, and AREA15 is off-Strip near Meow Wolf, likely a quick hop from Angela's.
+    </p>
+    <div class="two" style="margin-top:8px">
+      <div>
+        <div class="kv"><span>Us</span><span>Drake, Mason, Bailey, me (4)</span></div>
+        <div class="kv"><span>Address</span><span>3051 S Rancho Dr, Las Vegas, NV 89102</span></div>
+        <div class="kv"><span>Saturday hours</span><span>4 PM – 11 PM (last entry 9 PM)</span></div>
+        <div class="kv"><span>Phone</span><span>(800) 447-0679</span></div>
+      </div>
+      <div>
+        <div class="kv"><span>GA</span><span>$49</span></div>
+        <div class="kv"><span>Unlimited entry</span><span>$79 (the move, if y'all are in)</span></div>
+        <div class="kv"><span>Site</span><span>universalhorrorunleashed.com</span></div>
+        <div class="kv"><span>Backup site</span><span>area15.com/experiences</span></div>
+      </div>
+    </div>
+    <p class="alt"><b>How I'd love to play it:</b> Unlimited-entry for the four of us so we can re-hit the best house. Roll in around 5 PM, swing the will-call pickup on the way, dinner inside (next card), back to Angela's by 11. Open to anything else though — say the word if a different shape works better.</p>
+  </div>
+
+  <div class="card gold">
+    <p class="who" style="font-size:18px">🍷 Bigger swing · Food, Film, Frights @ Premiere House</p>
+    <p class="why">
+      Inside UHU. Blumhouse-themed restaurant. <b>4-course prix fixe + a surprise horror movie + themed cocktails.</b> Brand-new series — runs only "select Sat/Sun nights" all of May 2026, maybe 4-8 total seatings. The version of the night I think we'd be telling stories about for years.
+    </p>
+    <p class="alt"><b>I'm trying to book it for May 16.</b> The calendar isn't web-indexed; it's a phone-call situation — <b>(800) 447-0679</b>. No credit card to book. UHU admission required. 21+ for cocktails. Will let y'all know what I lock down.</p>
+  </div>
+
+  <div class="card">
+    <p class="who" style="font-size:16px">👻 If UHU doesn't pull anyone</p>
+    <ul style="margin:8px 0 0;padding-left:20px;color:#dccff5;font-size:14px;line-height:1.7">
+      <li><b>Vegas Ghosts</b> — Strip walking ghost tour. Mob/hotel-haunting/celebrity stories. Lower-key, good for a tired post-flight night.</li>
+      <li><b>Tom Devlin's Monster Museum</b> (Boulder City, 10 AM – 6 PM) — screen-used props + creature suits. Daytime only — better as a Sunday-afternoon pre-gate hang if anyone wants company.</li>
+      <li><b>Or just Angela's + takeout.</b> If anyone's wiped from travel, there's no shame in sliding the night that direction. Sunday's the marathon.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <p class="who" style="font-size:16px">⏰ Two soft ideas for Saturday</p>
+    <p class="why">
+      <b>Will-call pickup if it's easy.</b> Sat 2 PM – 2 AM window is generous. Picking up wristbands Saturday means Sunday is just music.<br/>
+      <b>Pacing.</b> Sunday's 7 PM → 5:30 AM. Whatever lets you wake up Sunday feeling fresh.
+    </p>
+  </div>
+
+  <h2 style="margin-top:30px"><span class="num">Track B</span> Saturday at EDC · Matt · Dave · Trent</h2>
+  <div class="card">
+    <p class="why">
+      Matt, Dave, Trent — y'all are inside the Speedway Saturday while the rest of us settle into Vegas. <b>It's your night.</b> Different headliners, different stages, your rhythm. No expectations from the group chat — enjoy it however it feels right. We meet up Sunday.
+    </p>
+    <div class="two" style="margin-top:8px">
+      <div>
+        <div class="kv"><span>Your night</span><span>EDC Saturday · 7 PM – 5:30 AM</span></div>
+        <div class="kv"><span>Gates</span><span>S / F / C-D</span></div>
+      </div>
+      <div>
+        <div class="kv"><span>Sunday meet-up</span><span>Inside gates · Downtown EDC</span></div>
+        <div class="kv"><span>Easy spot</span><span>Under the giant owl</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h2><span class="num">Day 3</span> Sunday · May 17 · The Festival</h2>
+
+  <h2><span class="num">01</span> Sunday Pre-Roll · Getting to the Speedway</h2>
+  <div class="card">
+    <div class="two">
+      <div>
+        <div class="kv"><span>Us four from Angela's</span><span>Drake · Mason · Bailey · me</span></div>
+        <div class="kv"><span>Matt</span><span>Coming from Summerlin · the local</span></div>
+        <div class="kv"><span>Dave + Trent</span><span>Already at EDC — meet inside</span></div>
+        <div class="kv"><span>Distance</span><span>~30 mi NE of Vegas</span></div>
+        <div class="kv"><span>Best route</span><span>215 N → I-15 N → Speedway Blvd</span></div>
+        <div class="kv"><span>Roll out</span><span>5:00–6:00 PM (gates open 5)</span></div>
+        <div class="kv"><span>Peak gridlock</span><span>7:00–9:00 PM</span></div>
+        <div class="kv"><span>Park</span><span>Mid-Brown Lot</span></div>
+        <div class="kv"><span>Gates</span><span>S · F · C/D</span></div>
+        <div class="kv"><span>Maps tip</span><span>Follow EDC signs, not Waze</span></div>
+      </div>
+      <div>
+        <div class="kv"><span>Hydrate before</span><span>32 oz water + electrolytes</span></div>
+        <div class="kv"><span>Eat before</span><span>Real food · carbs + protein</span></div>
+        <div class="kv"><span>Battery</span><span>Two power banks each</span></div>
+        <div class="kv"><span>Earplugs</span><span>Loop or Eargasm — your ears, year 10</span></div>
+        <div class="kv"><span>Layers</span><span>Desert, 60°F by 4 AM</span></div>
+        <div class="kv"><span>Inside-gates meet</span><span>Downtown EDC · the giant owl</span></div>
+        <div class="kv"><span>Suggested time</span><span>~7:30 PM if it works for everyone</span></div>
+      </div>
+    </div>
+    <p class="why" style="margin-top:14px">
+      <b>Convoy thoughts:</b> the four of us at Angela's can roll out together — Matt, want to scoop us, or should we meet you somewhere on the way? Whatever's easiest. Bailey's car is also an option since you're driving from LA anyway. <b>Dave + Trent</b> — y'all are already in EDC orbit Saturday, so let's just plan to find each other inside the gates. The giant owl in Downtown EDC is the easy landmark; if 7:30 PM works for a quick hi, beautiful — if not, the Alison meet-up at midnight is the one I really hope we all make. Pre-game dinner thoughts: Esther's Kitchen, Echo & Rig, or whatever's near Angela's. Coming home at sunrise: caravan back, crash at Angela's.
+    </p>
+  </div>
+
+  <h2 style="margin-top:30px"><span class="num">★</span> How I'm thinking about the night</h2>
+  <div class="card gold">
+    <p class="why" style="font-size:15px;color:#f7eccf;margin:0 0 8px">
+      <b>Roam however you want.</b> Drake, Bailey, Matt, Dave, Trent — everyone has their own ears. Chase the sets that pull you, drift the corners that feel right. Trying to herd seven through nine stages was never going to work, and I love that about all of you.
+    </p>
+    <p class="why" style="font-size:15px;color:#f7eccf;margin:0 0 8px">
+      <b>Mason and I will be the easy pair.</b> The hour-by-hour below is the path I'm drawing for the two of us. It's <em>a</em> path, not <em>the</em> path. Join us anywhere it sounds good, leave anywhere it doesn't.
+    </p>
+    <p class="why" style="font-size:15px;color:#f7eccf;margin:0">
+      <b>The one moment I'd love to share: Alison Wonderland · 12:05 AM · Cosmic Meadow.</b> If you're close and the night allows it, come find the rail. Everything else is yours.
+    </p>
+  </div>
+
+  <h2><span class="num">02</span> The Lay of the Land</h2>
+  <div class="card">
+    <p class="why" style="font-size:14px;color:#dccff5;margin:0 0 12px">
+      The Speedway lays out as one giant oval. Memorize this and you'll never lose the crew. <b>Daisy Lane</b> runs across the top connecting Bionic Jungle → Kinetic → Stereo Bloom → Quantum Valley.
+      <b>Memory Lane</b> drops south from Cosmic Meadow into <b>Downtown EDC</b>, the central plaza. <b>Rainbow Road</b> + <b>Electric Avenue</b> get you to the bottom-row stages (Wasteland, Bass Pod, Circuit Grounds).
+    </p>
+    <div class="map">
+      <div class="map-grid">
+        <div class="m m-bj">Bionic<br/>Jungle</div>
+        <div class="m m-kf">★ Kinetic Field</div>
+        <div class="m m-sb">Stereo Bloom</div>
+        <div class="m m-qv">Quantum<br/>Valley</div>
+
+        <div class="m m-cm">Cosmic<br/>Meadow ★</div>
+        <div class="m m-dt">Downtown<br/>EDC</div>
+        <div class="m m-ng">Neon<br/>Garden</div>
+
+        <div class="m m-wl">Wasteland</div>
+        <div class="m m-bp">Bass Pod</div>
+        <div class="m m-cg">Circuit<br/>Grounds</div>
+      </div>
+      <div class="legend">
+        <span class="lg"><b>Gate C/D</b> west — Camp EDC</span>
+        <span class="lg"><b>Gate S</b> east</span>
+        <span class="lg"><b>Gate F</b> south</span>
+        <span class="lg">★ = your two anchors</span>
+      </div>
+    </div>
+    <p class="why" style="margin-top:14px">
+      <b>Walking times that matter Sunday:</b> Cosmic Meadow → Kinetic ≈ <b>10 min</b> via Daisy Lane. Cosmic → Stereo Bloom ≈ <b>8 min</b> (the Skream detour). Cosmic → Bass Pod ≈ <b>10 min</b>. Kinetic → Circuit ≈ <b>12 min</b>. Plan one stage migration per hour, not two.
+    </p>
+  </div>
+
+  <h2 style="margin-top:30px"><span class="num">★</span> Wander · Downtown EDC · Serendipity</h2>
+  <div class="card">
+    <p class="why" style="margin:0 0 10px">
+      A reminder I want to give myself out loud: <b>EDC isn't only stages.</b> Some of the best moments — every year — happen between sets. Walking Daisy Lane at 8 PM with the sun gone and the lasers warming up. Stopping under the giant owl in <b>Downtown EDC</b> just to look up. A stranger handing you a bracelet. Climbing on an art car as it rolls past. The Ferris wheel from the back of the Cosmic Meadow lawn.
+    </p>
+    <p class="why" style="margin:0 0 10px">
+      The hour-by-hour below is a path I'm drawing — but I want to <b>leave real space for wandering</b>. If a card below says "9:00 PM" and at 9:00 PM the magic is happening on a different lane, that's the magic. Go.
+    </p>
+    <p class="why" style="margin:0 0 10px">
+      Things worth a wander when you have a window: <b>Downtown EDC</b> (giant owl + art installations + kandi exchanges + art cars), the <b>Insomniac Passport</b> stamp activations early (lines are nothing 7–10 PM), the <b>carnival rides</b>, the <b>Trinket Tent</b> for 30th-anniversary merch, Memory Lane's <b>art at midnight</b>. None of it requires planning. Just leave the room for it.
+    </p>
+    <p class="why" style="margin:0">
+      <b>Side stages worth bumping into:</b> for the 30th, EDC has <b>8 side stages + art cars</b> beyond the 9 mains — they cluster near Downtown EDC. The standout for Sunday: <b>Takis Rave Hangar</b>, the drum & bass den. <b>Rohaan plays a DnB set 10:00–11:30 PM</b>, and Skanka, Justin Hawkes, AK1200, and others rotate through across the weekend. If DnB pulls you, this is the room.
+    </p>
+  </div>
+
+  <h2><span class="num">03</span> Hour by Hour <span style="font-size:13px;font-weight:400;color:var(--dim);letter-spacing:.04em;text-transform:none">(what Mason and I are doing · join wherever · wander whenever)</span></h2>
+
+  <div class="card">
+    <div class="row">
+      <div class="time">7:00 PM</div>
+      <div class="body">
+        <p class="who">Walk in. The festival is the opening act.</p>
+        <span class="stage s-cosmic">wander</span>
+        <p class="why">Whichever gate, drift toward <b>Daisy Lane</b>. The first hour is for letting the place wash over you — the giant owl, the megastructure, art cars rolling, the lasers warming up against the dusk. No need to sprint anywhere yet. Hit Casa Bacardi for a first drink if it pulls you. <b>Mason and I will probably just walk for the first hour.</b></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <div class="time">8:00 PM</div>
+      <div class="body">
+        <p class="who">Wander or warm up — Sippy, Ship Wrek, or Downtown EDC</p>
+        <span class="stage s-basspod">bassPOD: Sippy</span> <span class="stage s-kinetic">kineticFIELD: Ship Wrek</span> <span class="stage s-cosmic">or wander</span>
+        <p class="why">Sippy at Bass Pod (7:50–8:40) is bass-pop joy and an easy first set. Ship Wrek at Kinetic if you want the big-room glow. <b>Or stay in Downtown EDC</b> — the Insomniac Passport stamp lines are nothing this early, the art is fresh, and the kandi exchanges flow easily before the crowd thickens.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <div class="time">9:00 PM</div>
+      <div class="body">
+        <p class="who">Anna · techno cathedral · Kandi pickup en route</p>
+        <span class="stage s-circuit">circuitGROUNDS</span>
+        <p class="why">Brazilian techno queen, 8:30–10:00. This is the 1720-Warehouse-coded slot of your night. <b>On the walk down: stop at the Kandi Station</b> for the 10-year-move beads — lines are lightest before 10pm. Take Anna for 30 min, then drift. <em>Alt:</em> Layton Giordani at Kinetic for harder, faster minimal.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card hot">
+    <div class="row">
+      <div class="time">10:00 PM</div>
+      <div class="body">
+        <p class="who">⭐ San Holo · Cosmic Meadow</p>
+        <span class="stage s-cosmic">cosmicMEADOW</span>
+        <p class="why">Wholesome riddim. Melodic dubstep with feelings. The "tear up on purpose" warmup before Alison if you want the long approach — easy to settle in at Cosmic from here.</p>
+        <p class="alt"><b>If a different sound is calling:</b> Funk Tribu (Kinetic, 10:07–11:15) for Italian techno that's been the talk of the season — or <b>Rohaan at Takis Rave Hangar (10:00–11:30)</b> for the drum &amp; bass den, if DnB is your thing.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <div class="time">11:00 PM</div>
+      <div class="body">
+        <p class="who">Dabin · holds the room</p>
+        <span class="stage s-cosmic">cosmicMEADOW</span>
+        <p class="why">Dabin → Alison is a beautiful pairing. If you're aiming for the rail, this is when it's worth claiming. A clean water break here goes a long way before the big one.</p>
+        <p class="alt"><b>Detour for legends:</b> Skream masterclass at stereoBLOOM, 10:30–11:45. Dubstep originator. Worth the 7-minute walk if Mason wants the throwback.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="alison">
+    <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="label">★ THE MOMENT ★</div>
+    <h3>Alison Wonderland</h3>
+    <div class="clock">12:05 → 1:05 AM</div>
+    <div class="where"><b>cosmicMEADOW</b> · Sunday, May 17 → 18</div>
+    <p class="note">
+      Electric Zoo 2019 — Brennan and me, tearing up at her set, "in the dancefloor sense and the good cry sense." <b>Drake, Dave — you were on that VIP list with us.</b> Seven years and one full chapter later, I get to watch her again with Mason next to me, Bailey, Matt, Trent, and the two of you. The ten-year arc, the seven of us. <b>Hold the kandi until the second drop.</b>
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <div class="time">1:05 AM</div>
+      <div class="body">
+        <p class="who">Seven Lions · stay put</p>
+        <span class="stage s-cosmic">cosmicMEADOW</span>
+        <p class="why">Seven Lions follows Alison at the same stage — melodic bass into trance. The flow is intentional and the floor will not move. Ride it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <div class="time">2:00 AM</div>
+      <div class="body">
+        <p class="who">Choose your second peak</p>
+        <span class="stage s-circuit">Solomun (Circuit, 1:00–2:30)</span>
+        <span class="stage s-kinetic">Martin Garrix (Kinetic, 1:47–2:57)</span>
+        <p class="why">Two A-tier paths. Solomun is the deep-house pilgrimage; Garrix is the festival-anthem fireworks. Wander wherever the music sounds best to you — Mason and I will probably let the floor decide.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <div class="time">3:00 AM</div>
+      <div class="body">
+        <p class="who">Vintage Culture · Cloonee · or wander it out</p>
+        <span class="stage s-circuit">circuitGROUNDS</span>
+        <span class="stage s-kinetic">kineticFIELD</span>
+        <span class="stage s-cosmic">or wander</span>
+        <p class="why">Vintage Culture (Circuit, 2:30–4:00) is your gorgeous-Brazilian-house finale. Cloonee (Kinetic, 3:01–4:10) is your tech-house anthem moment. Or take this hour to <b>wander Downtown EDC</b> — the late-night version of the plaza is its own thing, art cars roaming, kandi flowing easy, the Ferris wheel turning. Easy time to find a stranger to trade beads with before the sunrise push.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card gold">
+    <div class="row">
+      <div class="time">4:14 AM</div>
+      <div class="body">
+        <p class="who">⭐ Armin van Buuren · the SUNRISE set</p>
+        <span class="stage s-kinetic">kineticFIELD</span>
+        <p class="why">4:14 → 5:28 AM. The closing set on the main stage as the desert sky turns pink. Hard to imagine a sweeter way to end the tenth. Mason and I will be at Kinetic for this — if you want the sunrise on the main stage, that's where we'll be.</p>
+        <p class="alt"><b>If you want the underground sunrise instead:</b> Aeon:Mode (Blanke's project) at bassPOD, 4:30–5:30. Cinematic dubstep dawn. Both work.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2><span class="num">04</span> Stage Cheat Sheet · for Splits + Reconvenes</h2>
+  <div class="grid">
+    <div class="tile" style="border-color:rgba(255,58,161,.4)">
+      <h4 style="background:var(--kinetic);-webkit-background-clip:text;background-clip:text;color:transparent">kineticFIELD</h4>
+      <ul>
+        <li><span class="t">10:07p</span><b>Funk Tribu</b></li>
+        <li><span class="t">11:19p</span><b>GRiZ B2B Wooli</b></li>
+        <li><span class="t">12:32a</span><b>Zedd</b></li>
+        <li><span class="t">1:47a</span><b>Martin Garrix</b></li>
+        <li><span class="t">3:01a</span><b>Cloonee</b></li>
+        <li><span class="t">4:14a</span><b>Armin van Buuren ☀</b></li>
+      </ul>
+    </div>
+    <div class="tile" style="border-color:rgba(34,211,238,.4)">
+      <h4 style="background:var(--cosmic);-webkit-background-clip:text;background-clip:text;color:transparent">cosmicMEADOW</h4>
+      <ul>
+        <li><span class="t">10:00p</span><b>San Holo</b></li>
+        <li><span class="t">11:00p</span><b>Dabin</b></li>
+        <li><span class="t">12:05a</span><b>Alison Wonderland ★</b></li>
+        <li><span class="t">1:05a</span><b>Seven Lions</b></li>
+        <li><span class="t">3:20a</span><b>Black Tiger Sex Machine</b></li>
+      </ul>
+    </div>
+    <div class="tile" style="border-color:rgba(163,230,53,.4)">
+      <h4 style="background:var(--circuit);-webkit-background-clip:text;background-clip:text;color:transparent">circuitGROUNDS</h4>
+      <ul>
+        <li><span class="t">8:30p</span><b>Anna</b></li>
+        <li><span class="t">11:30p</span><b>Chris Stussy</b></li>
+        <li><span class="t">1:00a</span><b>Solomun</b></li>
+        <li><span class="t">2:30a</span><b>Vintage Culture</b></li>
+      </ul>
+    </div>
+    <div class="tile" style="border-color:rgba(255,122,0,.4)">
+      <h4 style="background:var(--basspod);-webkit-background-clip:text;background-clip:text;color:transparent">bassPOD</h4>
+      <ul>
+        <li><span class="t">7:50p</span><b>Sippy</b></li>
+        <li><span class="t">10:30p</span><b>A.M.C</b></li>
+        <li><span class="t">11:30p</span><b>Virtual Riot</b></li>
+        <li><span class="t">12:30a</span><b>Peekaboo</b></li>
+        <li><span class="t">4:30a</span><b>Aeon:Mode ☀</b></li>
+      </ul>
+    </div>
+    <div class="tile" style="border-color:rgba(57,255,20,.35)">
+      <h4 style="background:var(--neon);-webkit-background-clip:text;background-clip:text;color:transparent">neonGARDEN</h4>
+      <ul>
+        <li><span class="t">9:30p</span><b>Adiel</b></li>
+        <li><span class="t">12:10a</span><b>999999999</b></li>
+        <li><span class="t">1:30a</span><b>Indira Paganotto</b></li>
+        <li><span class="t">2:50a</span><b>KI/KI</b></li>
+      </ul>
+    </div>
+    <div class="tile" style="border-color:rgba(167,139,250,.4)">
+      <h4 style="background:var(--quantum);-webkit-background-clip:text;background-clip:text;color:transparent">quantumVALLEY</h4>
+      <ul>
+        <li><span class="t">11:00p</span><b>Eli &amp; Fur</b></li>
+        <li><span class="t">12:00a</span><b>Tinlicker</b></li>
+        <li><span class="t">1:00a</span><b>Cassian</b></li>
+        <li><span class="t">3:30a</span><b>Innellea</b></li>
+      </ul>
+    </div>
+    <div class="tile" style="border-color:rgba(253,230,138,.4)">
+      <h4 style="background:var(--stereo);-webkit-background-clip:text;background-clip:text;color:transparent">stereoBLOOM</h4>
+      <ul>
+        <li><span class="t">10:30p</span><b>Skream</b> ← legend slot</li>
+        <li><span class="t">11:45p</span><b>Hamdi</b></li>
+      </ul>
+    </div>
+    <div class="tile" style="border-color:rgba(251,113,133,.4)">
+      <h4 style="background:var(--waste);-webkit-background-clip:text;background-clip:text;color:transparent">wasteLAND</h4>
+      <ul>
+        <li><span class="t">11:30p</span><b>DJ Isaac</b></li>
+        <li><span class="t">1:30a</span><b>Sub Zero Project</b></li>
+        <li><span class="t">2:30a</span><b>Rooler</b></li>
+      </ul>
+    </div>
+    <div class="tile" style="border-color:rgba(52,211,153,.4)">
+      <h4 style="background:var(--bionic);-webkit-background-clip:text;background-clip:text;color:transparent">bionicJUNGLE</h4>
+      <ul>
+        <li><span class="t">12:00a</span><b>Tiga</b></li>
+        <li><span class="t">1:30a</span><b>DJ Tennis B2B Red Axes</b></li>
+      </ul>
+    </div>
+    <div class="tile" style="border-color:rgba(239,68,68,.4)">
+      <h4 style="background:var(--takis);-webkit-background-clip:text;background-clip:text;color:transparent">takisRAVEHANGAR</h4>
+      <ul>
+        <li style="color:#dccff5;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border-bottom:0">drum &amp; bass · side stage</li>
+        <li><span class="t">10:00p</span><b>Rohaan (DnB)</b></li>
+        <li style="color:#9b87cc;font-style:italic">Across weekend: Skanka · Justin Hawkes · AK1200 · Falko · Fallen · Koji Aiken · Nightstalker</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2><span class="num">05</span> The 10-Year Move · my one ask</h2>
+  <div class="card gold">
+    <p class="why" style="font-size:15px;color:#f7eccf;margin:0 0 10px">
+      <b>Around 9:00 PM</b> — I'll swing by the official <b>Kandi Station</b> early while it's still stocked and make beads for all of us — one per EDC year. (Mason, Drake — yours mark our 10th. Bailey, Matt, Dave, Trent — you each get a set too. The gift travels.)
+    </p>
+    <p class="why" style="font-size:15px;color:#f7eccf;margin:0 0 10px">
+      <b>Around 11:45 PM</b> — I'll send the group chat: <b>"Cosmic Meadow rail in 15 if you can."</b> Open invitation, not a summons. If you're nearby, come find us. If you're deep in a Solomun set or holding a perfect spot at Bass Pod, stay where the music's good — I'll catch you after.
+    </p>
+    <p class="why" style="font-size:15px;color:#f7eccf;margin:0 0 10px">
+      <b>11:55 PM</b> — Cosmic Meadow rail, ten minutes before Alison. Whoever made it: we trade beads, one bracelet per year. <b>P.L.U.R.</b>, pass them across, then settle in for the set.
+    </p>
+    <p class="why" style="font-size:15px;color:#f7eccf;margin:0">
+      <b>Second drop</b> — when the field cracks open, the ten years are on whoever's there. Photo after, before sweat ruins it. Then drift back to whatever's pulling you next.
+    </p>
+  </div>
+
+  <h2><span class="num">06</span> Bonus Joys · the optional anniversary upgrades</h2>
+  <div class="two">
+    <div class="card">
+      <p class="who" style="font-size:16px">🚁 Maverick "Electric Sky" Helicopter</p>
+      <p class="why">Ten-minute flyover of the speedway at night. The lasers from the air. If you book one slot for the weekend, Sunday at sundown is the move — book on the official Insomniac travel page.</p>
+    </div>
+    <div class="card">
+      <p class="who" style="font-size:16px">📓 Insomniac Passport</p>
+      <p class="why">Stamp activations scattered across the venue. Hit them between sets early in the night (7–10pm) when the lines are nothing. A perfect souvenir of the 10th.</p>
+    </div>
+    <div class="card">
+      <p class="who" style="font-size:16px">🏛️ Marquee SkyDeck</p>
+      <p class="why">If anyone in the crew has VIP, the elevated viewing deck above Kinetic is the cleanest sightline for the Armin sunrise. Worth staking out by 4am.</p>
+    </div>
+    <div class="card">
+      <p class="who" style="font-size:16px">📸 Photo Op + Trinket Tent</p>
+      <p class="why">Group shot at the Photo Op spot before midnight. Hit the Trinket Tent (limited-edition merch beyond the General Store) for the 30th anniversary pieces.</p>
+    </div>
+  </div>
+
+  <h2><span class="num">07</span> Stuff I'm Bringing · Stuff Worth Knowing</h2>
+  <div class="two">
+    <div class="card">
+      <div class="kv"><span>Water</span><span>Hydration House every 90 min</span></div>
+      <div class="kv"><span>Snacks</span><span>Pretzels, jerky — cut at 11 PM</span></div>
+      <div class="kv"><span>Footwear</span><span>Trail runners, broken in</span></div>
+      <div class="kv"><span>Pockets</span><span>ID, card, key, phone, balm — that's it</span></div>
+      <div class="kv"><span>Earplugs</span><span>In before 10 PM</span></div>
+      <div class="kv"><span>Sunglasses</span><span>For the 4:30 AM finale</span></div>
+    </div>
+    <div class="card">
+      <div class="kv"><span>Roam by default</span><span>Mason w/ Gordon · others wherever feels good</span></div>
+      <div class="kv"><span>The one offer</span><span>Cosmic Meadow rail · 11:55 PM · Alison</span></div>
+      <div class="kv"><span>If a phone dies</span><span>Info booth · or Lost &amp; Found</span></div>
+      <div class="kv"><span>Care</span><span>GroundControl + Consciousness Group</span></div>
+      <div class="kv"><span>Refill water</span><span>Free water stations on every Lane</span></div>
+      <div class="kv"><span>Around 4 AM</span><span>Eat or sit if it sounds good. Then last set.</span></div>
+      <div class="kv"><span>Drake</span><span>Wedding's May 30 — pace if it lands right.</span></div>
+      <div class="kv"><span>Angela's place</span><span>The recovery roost.</span></div>
+    </div>
+  </div>
+
+  <h2><span class="num">08</span> The Crew · The Seven</h2>
+  <div class="card">
+    <div class="crew">
+      <span class="p">🪩 Gordon (me) · 10th EDC</span>
+      <span class="p">🌴 Mason · 10th EDC · my heart</span>
+      <span class="p">💍 Bailey · Mason's husband · the road from LA</span>
+      <span class="p">🍁 Drake · 10th EDC · groom in 13 days</span>
+      <span class="p">🚗 Matt · Summerlin local · EDC vet · all 3 days</span>
+      <span class="p">🐺 Dave · EDC Sat + Sun · EZ '19 reunion</span>
+      <span class="p">🌟 Trent · with Dave · Sat + Sun</span>
+    </div>
+    <p class="why" style="margin-top:12px">
+      Mason, Drake, and I got into our first elevator together in 2016, rode the shuttle, and never stopped. Matt — you've been doing EDC from Summerlin and are in the gates all three days. Bailey — driving Mason from LA, joining the Sunday floor. <b>Dave — you were on that 2019 Electric Zoo VIP list with Drake and me, the same trip where Alison Wonderland made me cry — and Trent's joining you.</b>
+    </p>
+    <p class="why" style="margin-top:8px">
+      Mason and I will be the easy pair Sunday. Everyone else — follow your ears. Dave + Trent will want their own thing. Drake will chase what Drake wants. Matt knows the speedway. Bailey too. <b>The one moment I'd love to share with everyone: Alison Wonderland, 12:05 AM, Cosmic Meadow.</b> The rest is yours. <em>The dancefloor is where the people you love stop being who they are everywhere else and become who they are with you.</em>
+      Cosmic at midnight if you can. Sunrise at Kinetic if you want it. Ten years on the wrist.
+    </p>
+  </div>
+
+  <p class="footer">made with <span class="heart">♥</span> · gordon · for the seven · may 2026</p>
+</div>
+</body>
+</html>
