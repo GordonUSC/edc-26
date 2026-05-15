@@ -14,6 +14,9 @@
 <meta property="og:description" content="An invitation from Gordon — for Mason, Bailey, Drake, Matt, Dave, and Trent. Saturday in town, Sunday at the Speedway. Alison at midnight. Armin at sunrise." />
 <meta name="twitter:card" content="summary_large_image" />
 <title>EDC Vegas '26 · Two Days · The Seven of Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unica+One&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" />
 <style>
   :root{
     --bg:#06030f;
@@ -37,7 +40,12 @@
     --takis:   linear-gradient(135deg,#ef4444,#f97316 60%,#facc15);
   }
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.45}
+  :root{
+    --f-display:"Unica One","Inter",-apple-system,sans-serif;
+    --f-body:"Inter",-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,sans-serif;
+    --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);-webkit-font-smoothing:antialiased;line-height:1.45}
   body{
     background:
       radial-gradient(900px 600px at 80% -10%, rgba(192,38,211,.35), transparent 60%),
@@ -47,6 +55,147 @@
     min-height:100vh;
     overflow-x:hidden;
   }
+
+  /* AURORA — slow animated gradient that breathes behind everything */
+  body::before{
+    content:"";
+    position:fixed;inset:-20%;
+    z-index:-1;
+    pointer-events:none;
+    background:
+      radial-gradient(40% 30% at 20% 30%, rgba(255,58,161,.18), transparent 70%),
+      radial-gradient(36% 28% at 80% 60%, rgba(34,211,238,.18), transparent 70%),
+      radial-gradient(30% 24% at 60% 20%, rgba(163,230,53,.10), transparent 70%);
+    filter:blur(40px);
+    animation: aurora 22s ease-in-out infinite alternate;
+  }
+  @keyframes aurora{
+    0%   { transform:translate(0,0) rotate(0deg) }
+    50%  { transform:translate(2%,-3%) rotate(2deg) }
+    100% { transform:translate(-3%,2%) rotate(-1deg) }
+  }
+  @media (prefers-reduced-motion: reduce){
+    body::before{animation:none}
+  }
+
+  /* STICKY TOP NAV — sleek section anchors */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:saturate(1.4) blur(14px);
+    -webkit-backdrop-filter:saturate(1.4) blur(14px);
+    background:rgba(6,3,15,.62);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .topnav__inner{
+    max-width:980px;margin:0 auto;
+    display:flex;align-items:center;gap:14px;
+    padding:10px 18px;
+  }
+  .topnav__mark{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--f-display);
+    font-size:18px;letter-spacing:.18em;
+    color:#fff;
+    text-decoration:none;
+  }
+  .topnav__mark svg{flex:0 0 auto}
+  .topnav__links{
+    margin-left:auto;
+    display:flex;gap:14px;flex-wrap:nowrap;overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .topnav__links::-webkit-scrollbar{display:none}
+  .topnav__links a{
+    font-family:var(--f-mono);
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--dim);text-decoration:none;white-space:nowrap;
+    padding:6px 10px;border-radius:8px;
+    transition:color .2s ease,background .2s ease;
+  }
+  .topnav__links a:hover{color:#fff;background:rgba(255,255,255,.06)}
+  @media (max-width:560px){
+    .topnav__inner{padding:8px 12px;gap:10px}
+    .topnav__mark{font-size:15px;letter-spacing:.14em}
+    .topnav__links a{font-size:10px;padding:5px 8px}
+  }
+
+  /* COUNTDOWN — gates open Sunday 7:00 PM PT */
+  .countdown{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    padding:14px;
+    border-radius:14px;
+    background:linear-gradient(135deg, rgba(255,58,161,.10), rgba(34,211,238,.10));
+    border:1px solid rgba(255,255,255,.12);
+  }
+  .countdown__head{
+    grid-column:1 / -1;
+    font-family:var(--f-mono);
+    font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:2px;
+    display:flex;justify-content:space-between;align-items:center;gap:8px;
+  }
+  .countdown__head .live{
+    display:inline-flex;align-items:center;gap:6px;color:var(--pink)
+  }
+  .countdown__head .live::before{
+    content:"";width:7px;height:7px;border-radius:50%;background:var(--pink);
+    box-shadow:0 0 10px var(--pink);
+    animation:pulse-dot 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse-dot{0%,100%{opacity:.45}50%{opacity:1}}
+  .countdown__cell{
+    text-align:center;
+    padding:10px 6px;border-radius:10px;
+    background:rgba(0,0,0,.28);
+    border:1px solid rgba(255,255,255,.08);
+  }
+  .countdown__num{
+    font-family:var(--f-display);
+    font-size:clamp(28px,6vw,42px);
+    line-height:1;color:#fff;
+    font-variant-numeric:tabular-nums;letter-spacing:.04em;
+  }
+  .countdown__label{
+    margin-top:4px;font-family:var(--f-mono);
+    font-size:10px;letter-spacing:.2em;color:var(--dim);
+    text-transform:uppercase;
+  }
+
+  /* DRAKE BANNER — open ask, group-visible */
+  .drake-banner{
+    margin:14px 0 6px;
+    border:1px solid rgba(255,209,102,.45);
+    border-radius:14px;
+    background:linear-gradient(90deg, rgba(255,209,102,.10), rgba(255,58,161,.06));
+    padding:14px 16px;
+    display:flex;gap:12px;align-items:flex-start;
+  }
+  .drake-banner .icon{font-size:24px;line-height:1.2}
+  .drake-banner h3{
+    margin:0 0 4px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)
+  }
+  .drake-banner p{margin:0;color:#e5dffe;font-size:13px;line-height:1.5}
+  .drake-banner code{
+    font-family:var(--f-mono);font-size:12px;
+    background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;color:#fff
+  }
+
+  /* PLUR INDEX — custom SVG gauge component */
+  .plur-gauge{
+    display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;
+    padding:14px;border-radius:14px;
+    background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+    border:1px solid rgba(255,255,255,.08);
+    margin-top:10px;
+  }
+  .plur-gauge svg{flex:0 0 auto}
+  .plur-gauge__label{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+  .plur-gauge__val{font-family:var(--f-display);font-size:34px;line-height:1;color:#fff;margin-top:2px}
+  .plur-gauge__sub{font-size:12px;color:var(--dim);margin-top:4px}
   .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
   /* HERO */
   .hero{
@@ -69,15 +218,20 @@
   }
   .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--pink);box-shadow:0 0 14px var(--pink)}
   h1{
-    font-size: clamp(38px, 8vw, 84px);
-    line-height:0.95;
-    margin:18px 0 8px;
-    letter-spacing:-0.02em;
-    font-weight:900;
+    font-family:var(--f-display);
+    font-size: clamp(44px, 10vw, 104px);
+    line-height:0.92;
+    margin:18px 0 12px;
+    letter-spacing:.01em;
+    font-weight:400;
     background:linear-gradient(90deg,#fff 0%,#ffd166 35%,#ff3aa1 65%,#22d3ee 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent;
     text-shadow: 0 0 40px rgba(255,58,161,.18);
+    text-transform:uppercase;
   }
+  h2{font-family:var(--f-display);letter-spacing:.04em;text-transform:uppercase;font-weight:400}
+  h2 .num{font-family:var(--f-mono);font-weight:700}
+  h3{font-family:var(--f-display);letter-spacing:.04em;font-weight:400}
   .sub{color:var(--dim);font-size:clamp(15px,2.4vw,18px);max-width:60ch}
   .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
   .pill{
@@ -335,10 +489,49 @@
 </style>
 </head>
 <body>
-<div class="wrap">
+
+<!-- STICKY TOP NAV -->
+<nav class="topnav" aria-label="Sections">
+  <div class="topnav__inner">
+    <a href="#top" class="topnav__mark">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff3aa1"/>
+            <stop offset=".5" stop-color="#ffd166"/>
+            <stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient>
+        </defs>
+        <circle cx="12" cy="12" r="3" fill="url(#logoGrad)"/>
+        <g fill="url(#logoGrad)">
+          <ellipse cx="12" cy="5"  rx="2.2" ry="3.4"/>
+          <ellipse cx="12" cy="19" rx="2.2" ry="3.4"/>
+          <ellipse cx="5"  cy="12" rx="3.4" ry="2.2"/>
+          <ellipse cx="19" cy="12" rx="3.4" ry="2.2"/>
+          <ellipse cx="7"  cy="7"  rx="2.4" ry="3" transform="rotate(-45 7 7)"/>
+          <ellipse cx="17" cy="7"  rx="2.4" ry="3" transform="rotate(45 17 7)"/>
+          <ellipse cx="7"  cy="17" rx="2.4" ry="3" transform="rotate(45 7 17)"/>
+          <ellipse cx="17" cy="17" rx="2.4" ry="3" transform="rotate(-45 17 17)"/>
+        </g>
+      </svg>
+      <span>EDC ’26</span>
+    </a>
+    <div class="topnav__links">
+      <a href="#sat">Sat</a>
+      <a href="#sun">Sun</a>
+      <a href="#stages">Stages</a>
+      <a href="#crew">Crew</a>
+      <a href="#directory">📞</a>
+      <a href="#weather">☀️</a>
+      <a href="#plur">🌈 PLUR</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
 
   <section class="hero">
-    <div class="sparkles"><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="sparkles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
     <span class="badge"><span class="dot"></span> An invitation from Gordon · Saturday May 16 + Sunday May 17, 2026</span>
     <h1>Ten Years In.<br/>Together.</h1>
     <p class="sub">Mason · Bailey · Drake · Matt · Dave · Trent — this is for the six of you. Saturday splits naturally: four of us land in Vegas, three of you are already at the Speedway for Day 2. Sunday all seven of us are inside the gates. The one moment I'd love to share with everyone — <b>Alison Wonderland</b>. Everything else is yours, however you want it.</p>
@@ -350,6 +543,18 @@
       <span class="pill"><strong>EDC turns 30</strong></span>
     </div>
 
+    <!-- LIVE COUNTDOWN to Sunday gates 7:00 PM PT -->
+    <div class="countdown" id="cd" aria-label="Countdown to Sunday gates">
+      <div class="countdown__head">
+        <span>Sunday gates open in</span>
+        <span class="live">LIVE</span>
+      </div>
+      <div class="countdown__cell"><div class="countdown__num" id="cd-d">—</div><div class="countdown__label">Days</div></div>
+      <div class="countdown__cell"><div class="countdown__num" id="cd-h">—</div><div class="countdown__label">Hours</div></div>
+      <div class="countdown__cell"><div class="countdown__num" id="cd-m">—</div><div class="countdown__label">Min</div></div>
+      <div class="countdown__cell"><div class="countdown__num" id="cd-s">—</div><div class="countdown__label">Sec</div></div>
+    </div>
+
     <div class="anniv">
       <div class="x">🛗</div>
       <div>
@@ -359,7 +564,7 @@
     </div>
   </section>
 
-  <h2><span class="num">Day 2</span> Saturday · May 16 · Two Tracks</h2>
+  <h2 id="sat"><span class="num">Day 2</span> Saturday · May 16 · Two Tracks</h2>
   <div class="card">
     <p class="why" style="font-size:14px;color:#dccff5;margin:0 0 12px">
       Saturday splits naturally. <b>Four of us</b> — me, Drake, Mason, Bailey — land in Vegas mid-afternoon and have the night to settle in. <b>Three of you</b> — Matt, Dave, Trent — are already at the Speedway for Day 2. The two tracks meet up Sunday.
@@ -446,7 +651,7 @@
     </div>
   </div>
 
-  <h2><span class="num">Day 3</span> Sunday · May 17 · The Festival</h2>
+  <h2 id="sun"><span class="num">Day 3</span> Sunday · May 17 · The Festival</h2>
 
   <h2><span class="num">01</span> Sunday Pre-Roll · Getting to the Speedway</h2>
   <div class="card">
@@ -658,7 +863,7 @@
     </div>
   </div>
 
-  <h2><span class="num">04</span> Stage Cheat Sheet · for Splits + Reconvenes</h2>
+  <h2 id="stages"><span class="num">04</span> Stage Cheat Sheet · for Splits + Reconvenes</h2>
   <div class="grid">
     <div class="tile" style="border-color:rgba(255,58,161,.4)">
       <h4 style="background:var(--kinetic);-webkit-background-clip:text;background-clip:text;color:transparent">kineticFIELD</h4>
@@ -772,13 +977,13 @@
     </div>
   </div>
 
-  <h2><span class="num">06</span> The Crew · The Seven</h2>
+  <h2 id="crew"><span class="num">06</span> The Crew · The Seven</h2>
   <div class="card">
     <div class="crew">
       <span class="p">🪩 Gordon (me) · 10th EDC</span>
       <span class="p">🌴 Mason · 10th EDC · my heart</span>
       <span class="p">💍 Bailey · Mason's husband · the road from LA</span>
-      <span class="p">🍁 Drake · 10th EDC · groom in 13 days</span>
+      <span class="p" style="background:linear-gradient(90deg,rgba(255,209,102,.25),rgba(255,58,161,.18));border-color:rgba(255,209,102,.4)">🍁 Drake · 10th EDC · groom in 13 days · 🎟 needs Sun wristband</span>
       <span class="p">🚗 Matt · Summerlin local · EDC vet · all 3 days</span>
       <span class="p">🐺 Dave · EDC Sat + Sun · EZ '19 reunion</span>
       <span class="p">🌟 Trent · with Dave · Sat + Sun</span>
@@ -793,7 +998,16 @@
   </div>
 
   <!-- ============ 07 · PHONE DIRECTORY ============ -->
-  <h2><span class="num">07</span> Phone Directory · For When You Lose Each Other</h2>
+  <h2 id="directory"><span class="num">07</span> Phone Directory · For When You Lose Each Other</h2>
+
+  <!-- DRAKE STATUS BANNER — group-visible open ask -->
+  <div class="drake-banner">
+    <div class="icon">🎟</div>
+    <div>
+      <h3>Drake needs a Sunday wristband</h3>
+      <p>As of <code>2026-05-14</code>: Drake doesn't currently have a Sunday pass. Insomniac primary is sold out — <b>resale is the only path.</b> Most-trusted routes: <b>StubHub</b> (FanProtect) · <b>Vivid Seats</b> · <b>Tixel</b> · or a <b>Front Gate official transfer</b> if anyone in the orbit has a Sunday they're not using. Drake can pre-purchase from his phone after landing Sat — mobile delivery makes day-of feasible. <em>Avoid Craigslist / FB Marketplace / DM offers; T-1 single-day is a scam window.</em></p>
+    </div>
+  </div>
   <div class="card gold">
     <div class="kv" style="font-size:14px;border-bottom:1px solid rgba(255,209,102,.3)">
       <span style="color:#ffd166;font-weight:700">🏠 HOST · ANGELA ROSEBORO</span>
@@ -830,8 +1044,8 @@
       <p style="font-size:12px;color:var(--dim);margin:4px 0 8px">Mason's husband · co-driving from LA</p>
       <a href="tel:+13104993204" style="color:#fff;font-weight:700;font-variant-numeric:tabular-nums;text-decoration:none">+1 (310) 499-3204</a>
     </div>
-    <div class="tile">
-      <h4 style="color:#22d3ee">🍁 Drake Dewar</h4>
+    <div class="tile" style="border:1px solid rgba(255,209,102,.4);background:linear-gradient(180deg,rgba(255,209,102,.08),rgba(255,58,161,.04))">
+      <h4 style="color:#ffd166">🍁 Drake Dewar <span style="font-family:var(--f-mono);font-size:9px;letter-spacing:.18em;color:#ff3aa1;background:rgba(255,58,161,.12);border:1px solid rgba(255,58,161,.4);padding:2px 6px;border-radius:999px;text-transform:uppercase;vertical-align:middle">🎟 needs ticket</span></h4>
       <p style="font-size:12px;color:var(--dim);margin:4px 0 8px">10th EDC · groom in 13 days · Winnipeg</p>
       <a href="tel:+12049553697" style="color:#fff;font-weight:700;font-variant-numeric:tabular-nums;text-decoration:none">+1 (204) 955-3697</a>
     </div>
@@ -858,7 +1072,7 @@
   </div>
 
   <!-- ============ 08 · WEATHER ============ -->
-  <h2><span class="num">08</span> Henderson Weather · 3-Day Forecast 🌞</h2>
+  <h2 id="weather"><span class="num">08</span> Henderson Weather · 3-Day Forecast 🌞</h2>
   <div class="card">
     <p class="why" style="margin-bottom:14px">
       Desert. The day will cook you; the night will surprise you with a chill. <b style="color:#fff">Sunday's overnight drops 28° from the high.</b> Layer up.
@@ -912,7 +1126,7 @@
   </div>
 
   <!-- ============ 09 · PLUR FORECAST ============ -->
-  <h2><span class="num">09</span> The PLUR Forecast 🌈 <span style="font-size:13px;font-weight:400;color:var(--dim);letter-spacing:.04em;text-transform:none">Peace · Love · Unity · Respect</span></h2>
+  <h2 id="plur"><span class="num">09</span> The PLUR Forecast 🌈 <span style="font-size:13px;font-weight:400;color:var(--dim);letter-spacing:.04em;text-transform:none">Peace · Love · Unity · Respect</span></h2>
   <div class="alison" style="background:radial-gradient(500px 220px at 100% 0%, rgba(163,230,53,.4), transparent 60%),radial-gradient(420px 260px at 0% 100%, rgba(255,58,161,.45), transparent 60%),linear-gradient(180deg, rgba(124,58,237,.25), rgba(34,211,238,.08))">
     <div class="label">Issued 2026-05-14 · Darby, EDM Bureau</div>
     <h3 style="background:linear-gradient(90deg,#a3e635,#22d3ee 50%,#ff3aa1);-webkit-background-clip:text;background-clip:text;color:transparent">The 10-Year Forecast Has Arrived</h3>
@@ -958,7 +1172,52 @@
     </p>
   </div>
 
-  <p class="footer">made with <span class="heart">♥</span> · gordon · for the seven · may 2026 · directory + weather + PLUR added 2026-05-14</p>
+  <p class="footer">made with <span class="heart">♥</span> · gordon · for the seven · may 2026 · directory + weather + PLUR added 2026-05-14 · design refresh 2026-05-14</p>
 </div>
+
+<script>
+(function(){
+  // Sunday gates open at 7:00 PM Pacific (UTC-7 PDT in May)
+  var target = new Date('2026-05-17T19:00:00-07:00').getTime();
+  var d=document.getElementById('cd-d');
+  var h=document.getElementById('cd-h');
+  var m=document.getElementById('cd-m');
+  var s=document.getElementById('cd-s');
+  if(!d||!h||!m||!s) return;
+  function pad(n){n=Math.max(0,n);return n<10?'0'+n:''+n}
+  function tick(){
+    var diff = target - Date.now();
+    if (diff <= 0){
+      d.textContent='00';h.textContent='00';m.textContent='00';s.textContent='00';
+      return;
+    }
+    var sec = Math.floor(diff/1000);
+    var dd = Math.floor(sec/86400);
+    var hh = Math.floor((sec%86400)/3600);
+    var mm = Math.floor((sec%3600)/60);
+    var ss = sec%60;
+    d.textContent = pad(dd);
+    h.textContent = pad(hh);
+    m.textContent = pad(mm);
+    s.textContent = pad(ss);
+  }
+  tick();
+  setInterval(tick,1000);
+
+  // Smooth-scroll the in-page anchors with header offset
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');
+      if(id.length<2) return;
+      var t=document.querySelector(id);
+      if(!t) return;
+      e.preventDefault();
+      var top = t.getBoundingClientRect().top + window.scrollY - 60;
+      window.scrollTo({top:top,behavior:'smooth'});
+      history.replaceState(null,'',id);
+    });
+  });
+})();
+</script>
 </body>
 </html>
